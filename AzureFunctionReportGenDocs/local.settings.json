@@ -1,0 +1,43 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated",
+    "Multitenancy": {
+      "Rcm": {
+        "ResponseQueueName": "reports-results",
+        "ReportTimeoutMinutes": 10,
+        "CancellationQueueName": "reports-cancellations",
+        "RequestQueueName": "reports-requests",
+        "Tenants": {
+          "SfCounselling": {
+            "Name" : "SfCounselling",
+            "ConnectionStrings": {
+              "Database": "XXX"
+            }
+          }
+        }
+      },
+      "Ehr": {
+        "ResponseQueueName": "reports-results",
+        "ReportTimeoutMinutes": 10,
+        "CancellationQueueName": "reports-cancellations",
+        "RequestQueueName": "reports-requests",
+        "Tenants": {
+          "Cosmetology": {
+            "Name": "Cosmetology",
+            "ConnectionStrings": {
+              "Database": "Server=(localdb)\\mssqllocaldb;Database=rnet-practice-cosmetology-local-db;Trusted_Connection=True;MultipleActiveResultSets=true"
+            }
+          },
+          "Dermatology": {
+            "Name": "Dermatology",
+            "ConnectionStrings": {
+              "Database": "Server=(localdb)\\mssqllocaldb;Database=rnet-practice-dermatology-local-db;Trusted_Connection=True;MultipleActiveResultSets=true"
+            }
+          }
+        }
+      }
+    }
+  }
+}
